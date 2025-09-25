@@ -1,0 +1,160 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to modern ocean-inspired color scheme with vibrant blues and corals */
+  --background: oklch(0.98 0.01 240); /* Clean white background */
+  --foreground: oklch(0.15 0.02 240); /* Deep navy text */
+  --card: oklch(0.96 0.01 240); /* Light card background */
+  --card-foreground: oklch(0.15 0.02 240);
+  --popover: oklch(0.96 0.01 240);
+  --popover-foreground: oklch(0.15 0.02 240);
+  --primary: oklch(0.55 0.25 220); /* Ocean blue primary */
+  --primary-foreground: oklch(0.98 0.01 240);
+  --secondary: oklch(0.7 0.2 180); /* Turquoise secondary */
+  --secondary-foreground: oklch(0.15 0.02 240);
+  --muted: oklch(0.92 0.01 240);
+  --muted-foreground: oklch(0.45 0.02 240);
+  --accent: oklch(0.65 0.25 25); /* Coral accent */
+  --accent-foreground: oklch(0.98 0.01 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.98 0.01 240);
+  --border: oklch(0.88 0.01 240);
+  --input: oklch(0.92 0.01 240);
+  --ring: oklch(0.55 0.25 220);
+  --chart-1: oklch(0.55 0.25 220); /* Ocean blue */
+  --chart-2: oklch(0.7 0.2 180); /* Turquoise */
+  --chart-3: oklch(0.65 0.25 25); /* Coral */
+  --chart-4: oklch(0.6 0.2 280); /* Purple */
+  --chart-5: oklch(0.75 0.2 120); /* Green */
+  --radius: 0.75rem;
+  --sidebar: oklch(0.96 0.01 240);
+  --sidebar-foreground: oklch(0.15 0.02 240);
+  --sidebar-primary: oklch(0.55 0.25 220);
+  --sidebar-primary-foreground: oklch(0.98 0.01 240);
+  --sidebar-accent: oklch(0.92 0.01 240);
+  --sidebar-accent-foreground: oklch(0.15 0.02 240);
+  --sidebar-border: oklch(0.88 0.01 240);
+  --sidebar-ring: oklch(0.55 0.25 220);
+}
+
+.dark {
+  --background: oklch(0.08 0.02 240);
+  --foreground: oklch(0.95 0.01 240);
+  --card: oklch(0.12 0.02 240);
+  --card-foreground: oklch(0.95 0.01 240);
+  --popover: oklch(0.12 0.02 240);
+  --popover-foreground: oklch(0.95 0.01 240);
+  --primary: oklch(0.65 0.25 220);
+  --primary-foreground: oklch(0.95 0.01 240);
+  --secondary: oklch(0.75 0.2 180);
+  --secondary-foreground: oklch(0.08 0.02 240);
+  --muted: oklch(0.18 0.02 240);
+  --muted-foreground: oklch(0.65 0.01 240);
+  --accent: oklch(0.7 0.25 25);
+  --accent-foreground: oklch(0.95 0.01 240);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.95 0.01 240);
+  --border: oklch(0.22 0.02 240);
+  --input: oklch(0.18 0.02 240);
+  --ring: oklch(0.65 0.25 220);
+  --sidebar: oklch(0.12 0.02 240);
+  --sidebar-foreground: oklch(0.95 0.01 240);
+  --sidebar-primary: oklch(0.65 0.25 220);
+  --sidebar-primary-foreground: oklch(0.95 0.01 240);
+  --sidebar-accent: oklch(0.18 0.02 240);
+  --sidebar-accent-foreground: oklch(0.95 0.01 240);
+  --sidebar-border: oklch(0.22 0.02 240);
+  --sidebar-ring: oklch(0.65 0.25 220);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Updated animations for ocean wave effect */
+@keyframes ocean-slide {
+  0% {
+    transform: translateX(100%) scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes coral-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px rgba(var(--color-accent), 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(var(--color-accent), 0.7);
+  }
+}
+
+.ocean-slide {
+  animation: ocean-slide 0.6s ease-out;
+}
+
+.coral-glow {
+  animation: coral-glow 2s infinite;
+}
+
+/* Ocean wave texture effect */
+.ocean-texture {
+  background-image: radial-gradient(circle at 20% 50%, rgba(0, 150, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 200, 200, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 100, 80, 0.06) 0%, transparent 50%);
+  background-size: 300px 300px, 200px 200px, 400px 400px;
+  background-position: 0 0, 100px 100px, 200px 200px;
+}
