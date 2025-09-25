@@ -16,7 +16,6 @@ import {
   Leaf,
   Crown,
   Ship,
-  Factory,
   Landmark,
   Zap,
 } from "lucide-react"
@@ -35,7 +34,7 @@ interface TimelineEvent {
 
 const timelineEvents: TimelineEvent[] = [
   {
-    year: 3000,
+    year: -2200,
     title: "Ancient Dilmun Civilization",
     description:
       "Bahrain becomes the center of the ancient Dilmun trading civilization, connecting Mesopotamia with the Indus Valley.",
@@ -45,13 +44,23 @@ const timelineEvents: TimelineEvent[] = [
     icon: <Landmark className="w-6 h-6" />,
   },
   {
-    year: 2000,
+    year: -300,
     title: "Tylos Period",
     description: "Greeks name the island Tylos, establishing it as an important center for pearl diving and trade.",
     details:
       "Under Greek influence, Bahrain became known as Tylos, famous throughout the ancient world for its exceptional pearls. The island developed sophisticated pearl diving techniques and established trade networks extending to India, Persia, and the Mediterranean. Greek geographers like Strabo documented the island's wealth and strategic importance. The period saw the introduction of new architectural styles, coinage systems, and cultural practices that blended Hellenistic and local traditions.",
     category: "ancient",
     icon: <Building className="w-6 h-6" />,
+  },
+  {
+    year: 200,
+    title: "Awal - The Sacred Island",
+    description:
+      "Bahrain becomes known as 'Awal', named after a revered idol, serving as a major religious and trading center.",
+    details:
+      "During the pre-Islamic period, Bahrain was known as 'Awal', named after a sacred idol that was worshipped on the island. This period saw Bahrain emerge as both a significant religious pilgrimage site and a thriving commercial hub. The island's strategic location made it a crucial stop for traders traveling between the Arabian Peninsula, Mesopotamia, and India. Awal was renowned for its pearl diving industry, date palm cultivation, and fresh water springs. The island's religious significance attracted pilgrims from across the Arabian Peninsula, while its commercial importance grew through the trade of pearls, dates, and other goods. Archaeological evidence suggests sophisticated urban settlements and religious complexes during this era.",
+    category: "ancient",
+    icon: <Crown className="w-6 h-6" />,
   },
   {
     year: 629,
@@ -91,29 +100,20 @@ const timelineEvents: TimelineEvent[] = [
     icon: <Trophy className="w-6 h-6" />,
   },
   {
-    year: 1820,
-    title: "British Protection Treaty",
-    description: "Bahrain signs the General Treaty of Peace with Britain, beginning the protectorate relationship.",
+    year: 1961,
+    title: "Bahrain International Airport Opens",
+    description: "The original Bahrain International Airport opens, becoming a major aviation hub in the Gulf region.",
     details:
-      "The signing of the General Treaty of Peace marked the beginning of British influence in Bahrain's affairs. The treaty was part of Britain's strategy to secure the Gulf trade routes to India and suppress piracy. Under British protection, Bahrain gained security from external threats while maintaining internal autonomy. The British established a political agency in Manama and gradually increased their influence over foreign policy, defense, and major economic decisions. This relationship provided stability but limited Bahrain's sovereignty for 150 years.",
-    category: "trade",
-    icon: <Ship className="w-6 h-6" />,
-  },
-  {
-    year: 1932,
-    title: "Oil Discovery Revolution",
-    description: "The first oil well is drilled at Jebel Dukhan, transforming Bahrain's economy forever.",
-    details:
-      "The discovery of oil at Well No. 1 in Jebel Dukhan by the Bahrain Petroleum Company (BAPCO) revolutionized the kingdom's economy and society. Bahrain became the first Gulf state to discover oil, preceding Saudi Arabia by six years. The oil industry brought modern infrastructure, education, and healthcare systems. Thousands of workers from across the region migrated to Bahrain, creating a cosmopolitan society. Oil revenues funded the development of Manama as a regional financial center and enabled massive investments in education and social services.",
+      "The opening of Bahrain International Airport marked the kingdom's entry into the jet age and established it as a crucial aviation hub connecting East and West. The airport was strategically positioned to serve as a refueling stop for long-haul flights between Europe and Asia. The iconic Concorde supersonic aircraft made regular stops at Bahrain Airport during its service years, making Bahrain one of the few countries to host this technological marvel. The airport's duty-free shopping and transit facilities became legendary among international travelers, contributing significantly to Bahrain's economy and global reputation.",
     category: "development",
-    icon: <Factory className="w-6 h-6" />,
+    icon: <Zap className="w-6 h-6" />,
   },
   {
     year: 1968,
     title: "Educational Renaissance",
     description: "Bahrain establishes the University of Bahrain and expands public education across the kingdom.",
     details:
-      "The establishment of the University of Bahrain marked a turning point in the kingdom's educational development. The government launched comprehensive education reforms, making primary and secondary education free and compulsory for all citizens. Technical and vocational training institutes were established to support the growing oil industry. Women's education was particularly emphasized, with Bahrain becoming a regional leader in female literacy and higher education participation. The education system produced a skilled workforce that would drive Bahrain's economic diversification efforts.",
+      "The establishment of the University of Bahrain marked a turning point in the kingdom's educational development. The government launched comprehensive education reforms, making primary and secondary education free and compulsory for all citizens. Technical and vocational training institutes were established to support the growing oil industry. Women's education was particularly emphasized, with Bahrain becoming a regional leader in female literacy and higher education participation. The education system produced a skilled workforce that would drive Bahrain's economic diversification efforts and establish Bahrain as the 'Education Hub' of the Gulf.",
     category: "development",
     icon: <Lightbulb className="w-6 h-6" />,
   },
@@ -137,6 +137,24 @@ const timelineEvents: TimelineEvent[] = [
     icon: <Building className="w-6 h-6" />,
   },
   {
+    year: 1978,
+    title: "Modern Healthcare System",
+    description: "Bahrain establishes Salmaniya Medical Complex and launches universal healthcare coverage.",
+    details:
+      "The opening of Salmaniya Medical Complex marked Bahrain's commitment to providing world-class healthcare to all citizens. The government implemented universal healthcare coverage, making medical services free for all Bahraini citizens. The kingdom invested heavily in medical education, establishing partnerships with international medical schools and attracting top medical professionals from around the world. Bahrain became a regional leader in specialized medical treatments, including cardiac surgery, oncology, and organ transplantation. The healthcare system achieved some of the highest health indicators in the region, with life expectancy and infant mortality rates comparable to developed nations.",
+    category: "development",
+    icon: <Lightbulb className="w-6 h-6" />,
+  },
+  {
+    year: 1995,
+    title: "Bahrain International Exhibition Centre",
+    description: "The state-of-the-art exhibition center opens, positioning Bahrain as a regional business hub.",
+    details:
+      "The Bahrain International Exhibition Centre transformed the kingdom into a premier destination for international trade shows, conferences, and business events. The facility became the largest exhibition center in the Gulf region, hosting major events like the Bahrain International Airshow, Gulf Industry Fair, and numerous automotive, technology, and healthcare exhibitions. The center's strategic location and world-class facilities attracted exhibitors and visitors from across the globe, contributing significantly to Bahrain's economy through business tourism. It established Bahrain as the 'Gateway to the Gulf' for international businesses seeking regional market access.",
+    category: "development",
+    icon: <Building className="w-6 h-6" />,
+  },
+  {
     year: 1999,
     title: "King Hamad's Modernization",
     description:
@@ -156,13 +174,41 @@ const timelineEvents: TimelineEvent[] = [
     icon: <Landmark className="w-6 h-6" />,
   },
   {
-    year: 2018,
-    title: "Digital Transformation Initiative",
-    description: "Bahrain launches comprehensive digital government services and becomes a regional fintech hub.",
+    year: 2004,
+    title: "Formula 1 Bahrain Grand Prix",
+    description: "Bahrain hosts its first Formula 1 Grand Prix, putting the kingdom on the global sports map.",
     details:
-      "Bahrain's digital transformation initiative revolutionized government services and positioned the kingdom as a regional technology leader. The eGovernment program digitized over 90% of government services, making Bahrain one of the most digitally advanced nations globally. The Central Bank of Bahrain created a regulatory sandbox for fintech companies, attracting international startups and established firms. Bahrain became the first country in the MENA region to regulate cryptocurrency and blockchain technology. The initiative included smart city projects, 5G network deployment, and artificial intelligence integration across government services.",
+      "The inaugural Bahrain Grand Prix marked a historic moment as the first Formula 1 race held in the Middle East. The Bahrain International Circuit, built in the desert at Sakhir, became an architectural marvel and engineering feat. The race attracted global attention and established Bahrain as a premier destination for international motorsports. The circuit features unique challenges including desert conditions and innovative lighting systems for night racing. The Grand Prix has become an annual highlight, attracting hundreds of thousands of visitors and generating significant economic impact while showcasing Bahrain's capability to host world-class sporting events.",
+    category: "modern",
+    icon: <Trophy className="w-6 h-6" />,
+  },
+  {
+    year: 2014,
+    title: "Nasser Centre for Science & Technology",
+    description: "Advanced science center opens, promoting STEM education and scientific innovation in Bahrain.",
+    details:
+      "The Nasser Centre for Science and Technology became a cornerstone of Bahrain's commitment to scientific education and innovation. The center features state-of-the-art laboratories, planetarium, and interactive exhibits covering physics, chemistry, biology, and space science. It serves as both an educational facility for students and a public science museum, inspiring the next generation of Bahraini scientists and engineers. The center hosts international science competitions, research conferences, and innovation workshops. Its programs have significantly contributed to improving STEM education outcomes and fostering a culture of scientific inquiry in Bahrain.",
+    category: "modern",
+    icon: <Lightbulb className="w-6 h-6" />,
+  },
+  {
+    year: 2021,
+    title: "New Bahrain International Airport Terminal",
+    description:
+      "The ultra-modern new terminal opens, tripling capacity and setting new standards for aviation excellence.",
+    details:
+      "The new Bahrain International Airport terminal represents a quantum leap in aviation infrastructure, featuring cutting-edge technology, sustainable design, and passenger-centric amenities. The terminal can handle 14 million passengers annually, tripling the airport's previous capacity. Advanced biometric systems, automated baggage handling, and smart gate technology create a seamless travel experience. The terminal's architectural design reflects Bahraini heritage while incorporating modern sustainability features including solar panels and energy-efficient systems. The expansion reinforces Bahrain's position as a major aviation hub connecting 50+ destinations worldwide.",
     category: "modern",
     icon: <Zap className="w-6 h-6" />,
+  },
+  {
+    year: 2025,
+    title: "Youth City 2030 Launch",
+    description: "Bahrain unveils Youth City 2030, a revolutionary urban development designed by and for young people.",
+    details:
+      "Youth City 2030 represents Bahrain's bold vision for empowering the next generation through innovative urban planning and youth-centric development. The project features co-working spaces, startup incubators, sports facilities, cultural centers, and affordable housing designed specifically for young professionals and entrepreneurs. The city incorporates smart technology, sustainable energy systems, and green spaces to create an ideal environment for innovation and creativity. Youth City serves as a model for youth engagement in urban planning and demonstrates Bahrain's commitment to investing in its young population as drivers of future economic growth.",
+    category: "future",
+    icon: <Building className="w-6 h-6" />,
   },
   {
     year: 2030,
@@ -170,7 +216,7 @@ const timelineEvents: TimelineEvent[] = [
     description:
       "Bahrain achieves its ambitious Vision 2030 goals for economic diversification, sustainability, and innovation.",
     details:
-      "Vision 2030 represents Bahrain's comprehensive transformation into a sustainable, diversified economy powered by innovation and human capital. The plan focuses on three key pillars: sustainability, competitiveness, and fairness. Major achievements include becoming carbon neutral, establishing Bahrain as the Silicon Valley of the Middle East, and creating a knowledge-based economy. The vision encompasses smart city infrastructure, renewable energy leadership, advanced manufacturing, and world-class tourism destinations. Education and healthcare systems rank among the world's best, while Bahrain maintains its position as the region's financial and business hub.",
+      "Vision 2030 represents Bahrain's comprehensive transformation into a sustainable, diversified economy powered by innovation and human capital. The plan focuses on three key pillars: sustainability, competitiveness, and fairness. Major achievements include becoming carbon neutral, establishing Bahrain as the Silicon Valley of the Middle East, and creating a knowledge-based economy. The vision encompasses smart city infrastructure, renewable energy leadership, advanced manufacturing, and world-class tourism destinations. Education and healthcare systems rank among the world's best, while Bahrain maintains its position as the region's financial and business hub with Youth City 2030 serving as a global model for youth empowerment.",
     category: "future",
     icon: <Leaf className="w-6 h-6" />,
   },
@@ -265,11 +311,11 @@ export function BahrainTimeline() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <div className={`p-3 rounded-full ${getCategoryColor(currentEvent.category)}`}>{currentEvent.icon}</div>
                 <Badge variant="outline" className="text-lg px-4 py-2">
-                  {currentEvent.year === 3000
-                    ? "3000 BCE"
-                    : currentEvent.year < 1000
-                      ? `${currentEvent.year} CE`
-                      : currentEvent.year.toString()}
+                {Number(currentEvent.year) < 0
+                  ? `${Math.abs(Number(currentEvent.year))} BCE`
+                  : Number(currentEvent.year) < 1000
+                    ? `${currentEvent.year} CE`
+                    : currentEvent.year.toString()}
                 </Badge>
               </div>
               <CardTitle className="text-3xl mb-4 text-balance">{currentEvent.title}</CardTitle>

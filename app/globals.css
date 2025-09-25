@@ -158,3 +158,18 @@
   background-size: 300px 300px, 200px 200px, 400px 400px;
   background-position: 0 0, 100px 100px, 200px 200px;
 }
+
+/* Added scrollbar utilities for responsive timeline */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+/* Smooth scrolling for timeline navigation */
+.timeline-scroll {
+  scroll-behavior: smooth;
+}
