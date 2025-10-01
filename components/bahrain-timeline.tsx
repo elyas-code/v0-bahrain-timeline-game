@@ -297,11 +297,6 @@ export function BahrainTimeline() {
         </p>
       </header>
 
-      {/* Timeline Slider */}
-      <div className="px-6 py-4 border-b border-border bg-card/30 backdrop-blur-sm">
-        <TimelineSlider events={timelineEvents} currentIndex={currentIndex} onEventSelect={navigateToEvent} />
-      </div>
-
       {/* Main Content */}
       <div className="flex-1 flex flex-col lg:flex-row">
         {/* Event Display */}
@@ -311,11 +306,11 @@ export function BahrainTimeline() {
               <div className="flex items-center justify-center gap-4 mb-4">
                 <div className={`p-3 rounded-full ${getCategoryColor(currentEvent.category)}`}>{currentEvent.icon}</div>
                 <Badge variant="outline" className="text-lg px-4 py-2">
-                {Number(currentEvent.year) < 0
-                  ? `${Math.abs(Number(currentEvent.year))} BCE`
-                  : Number(currentEvent.year) < 1000
-                    ? `${currentEvent.year} CE`
-                    : currentEvent.year.toString()}
+                  {Number(currentEvent.year) < 0
+                    ? `${Math.abs(Number(currentEvent.year))} BCE`
+                    : Number(currentEvent.year) < 1000
+                      ? `${currentEvent.year} CE`
+                      : currentEvent.year.toString()}
                 </Badge>
               </div>
               <CardTitle className="text-3xl mb-4 text-balance">{currentEvent.title}</CardTitle>
@@ -441,7 +436,7 @@ export function BahrainTimeline() {
                   variant="outline"
                   className="w-full justify-start bg-transparent"
                 >
-                  🛡️ British Protection
+                  🛡️ Al Khalifa Dynasty
                 </Button>
                 <Button
                   onClick={() => navigateToEvent(9)}
@@ -451,7 +446,7 @@ export function BahrainTimeline() {
                   🇧🇭 Independence
                 </Button>
                 <Button
-                  onClick={() => navigateToEvent(11)}
+                  onClick={() => navigateToEvent(13)}
                   variant="outline"
                   className="w-full justify-start bg-transparent"
                 >
@@ -468,6 +463,10 @@ export function BahrainTimeline() {
             </Card>
           </div>
         </div>
+      </div>
+
+      <div className="px-6 py-4 border-t border-border bg-card/30 backdrop-blur-sm">
+        <TimelineSlider events={timelineEvents} currentIndex={currentIndex} onEventSelect={navigateToEvent} />
       </div>
     </div>
   )
